@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+html, body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background-image: url(../../../resources/img/img_admin/bglogin.gif);
+	background-size: cover;
+}
+
+.center-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+}
+.center1-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+}
