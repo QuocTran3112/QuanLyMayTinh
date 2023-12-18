@@ -5,6 +5,21 @@ public class lsmhbean {
 	private String MaHoaDon;
 	private String NgayMua;
 	private String Mamay;
+	private String tenMay;
+	public lsmhbean(String maHoaDon, String ngayMua, String mamay, String tenMay, int soluongmua) {
+		super();
+		MaHoaDon = maHoaDon;
+		NgayMua = ngayMua;
+		Mamay = mamay;
+		this.tenMay = tenMay;
+		this.soluongmua = soluongmua;
+	}
+	public String getTenMay() {
+		return tenMay;
+	}
+	public void setTenMay(String tenMay) {
+		this.tenMay = tenMay;
+	}
 	private int soluongmua;
 	public String getMaHoaDon() {
 		return MaHoaDon;
@@ -30,13 +45,5 @@ public class lsmhbean {
 	public void setSoluongmua(int soluongmua) {
 		this.soluongmua = soluongmua;
 	}
-	public lsmhbean(String maHoaDon, String ngayMua, String mamay, int soluongmua) {
-		super();
-		MaHoaDon = maHoaDon;
-		NgayMua = ngayMua;
-		Mamay = mamay;
-		this.soluongmua = soluongmua;
-	}
-
 	
 }

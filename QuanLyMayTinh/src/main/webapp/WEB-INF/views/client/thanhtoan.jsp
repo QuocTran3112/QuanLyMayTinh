@@ -75,8 +75,6 @@
 									<th scope="col col-md-2">Đơn giá</th>
 									<th scope="col col-md-2">Số lượng</th>
 									<th scope="col col-md-2">Thành tiền</th>
-									<th scope="col col-md-2">Checkbox</th>
-									<th scope="col col-md-2">Xóa</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -99,10 +97,6 @@
 												<p style="justify-content: center;display: flex"><%=g.getSoluong()%></p>
 									</td>
 									<td><div class="mt-5"><%=g.getThanhtien()%>vnđ</div></td>
-									<td><input type="checkbox" name="deleteSelected" value="<%=g.getMamay()%>"></td>
-									<td><div class="mt-5">
-											<a href="xoaController?mm=<%=g.getMamay()%>"> <i class="fa-solid fa-trash text-success"></i></a>
-										</div></td>
 								</tr>
 								<%}%>							
 						</table>

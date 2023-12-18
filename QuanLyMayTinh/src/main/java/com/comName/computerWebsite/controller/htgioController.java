@@ -1,6 +1,7 @@
 package com.comName.computerWebsite.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,7 +10,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.comName.computerWebsite.bean.rolebean;
+import com.comName.computerWebsite.bean.userbean;
 import com.comName.computerWebsite.bo.ghbo;
+import com.comName.computerWebsite.dao.quyendao;
 
 /**
  * Servlet implementation class htgioController
@@ -31,6 +35,28 @@ public class htgioController extends HttpServlet {
 	 */
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+    	
+    	userbean user = (userbean)request.getSession().getAttribute("dn");
+    	quyendao qd = new quyendao();
+    	ArrayList<rolebean> roles = new ArrayList<rolebean>();
+    	try {
+			roles = qd.getRoles();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	String role = "";
+    	if (user!=null ) {
+    		for (int i =0; i<roles.size();i++) {
+        		if (roles.get(i).getRoleID()==user.getRoleID()) {
+        			role = roles.get(i) .getRoleName();
+        		}
+        	}
+    	}
+    	if (!role.equals("admin")) {
+    		request.setAttribute("invalidRole", "Bạn không có quyền xóa");
+    	}
+    	
 		try {
 			ghbo gbo = new ghbo();
 			// Xử lý yêu cầu khi được gọi qua phương thức GET

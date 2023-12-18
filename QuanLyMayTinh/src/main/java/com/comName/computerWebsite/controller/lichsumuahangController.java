@@ -19,6 +19,13 @@ public class lichsumuahangController extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		userbean firstcheck = (userbean)req.getSession().getAttribute("dn");
+		if (firstcheck==null) {
+			resp.sendRedirect("dangnhapController");
+			return;
+		}
+		
 		lichsumuahangdao lsmh = new lichsumuahangdao();
 		userbean user = (userbean)req.getSession().getAttribute("dn");
 		ArrayList<lsmhbean> ls = new ArrayList<lsmhbean>();

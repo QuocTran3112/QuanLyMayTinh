@@ -5,8 +5,8 @@
 <head>
 <title>Đăng nhập</title>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="resources/img/img_pages/user.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="resources/img/img_admin/laptopscreen.png" type="image/x-icon">
     <link href="${pageContext.request.contextPath}/resources/css/css_client/dangnhap.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">

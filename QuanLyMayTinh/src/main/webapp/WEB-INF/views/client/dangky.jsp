@@ -5,8 +5,8 @@
 <head>
 <title>Đăng Ký Tài Khoản</title>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="writtenpaper.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="resources/img/img_admin/laptopscreen.png" type="image/x-icon">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -41,7 +41,7 @@
           <input type="text" id="form3Example2cg" class="form-control form-control-lg"  name="txtrealname" required="required"/>                    
      </div>
      <div class="form-outline mb-4">
-          <label class="form-label" for="form3Example2cg" style="color: yellow;">Real Name</label>
+          <label class="form-label" for="form3Example2cg" style="color: yellow;">Email</label>
           <input type="email" id="form3Example2cg" class="form-control form-control-lg"  name="txtemail" required="required"/>                    
      </div>
      <div class="form-outline mb-4">

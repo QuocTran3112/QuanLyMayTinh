@@ -81,25 +81,33 @@
 									<td>
 										<!--<div class="mt-5"g.getSoluong()g() %></div>  -->
 										<form action="xoaController?ms=" <%=g.getMamay()%> method="post">
+										<% if (request.getAttribute("invalidRole")==null) {
+											%>
 											<a href="xoaController?tru=t&mm1=<%=g.getMamay()%>"><button
 													type="button" class="btn warning" name="tru">-</button></a> <input
 												type="text" name="txtsl" style="width: 40px;" id=""
 												value="<%=g.getSoluong()%>"> <a
 												href="xoaController?cong=c&mm1=<%=g.getMamay()%>"><button
 													type="button" class="btn warning" name="cong">+</button></a>
+													<% } else { %><input
+												type="text" name="txtsl" style="width: 40px;" id=""
+												value="<%=g.getSoluong()%>" read> 
+													<% } %>
 										</form>
 									</td>
 									<td><div class="mt-5"><%=g.getThanhtien()%>vnđ</div></td>
 									<td><input type="checkbox" name="deleteSelected" value="<%=g.getMamay()%>"></td>
 									<td><div class="mt-5">
 											<a href="xoaController?mm=<%=g.getMamay()%>"> <i class="fa-solid fa-trash text-success"></i></a>
-										</div> <% if (request.getAttribute("invalidRole")!=null) {
-											out.print(request.getAttribute("invalidRole")); }%>
+										</div> 
 										</td>
 								</tr>
 								<%}%>							
 						</table>
 						<input type="submit" name="xoadc" value="Xóa đã chọn" class="btn-btn warning">
+						<div style="align-items: center; justify-content: center; display:flex; margin-bottom: 80px">
+						<% if (request.getAttribute("invalid")!=null) {
+											out.print("Bạn không có quyền chỉnh sửa"); }%></div>
 					</div>
 				</form>
 			</div>

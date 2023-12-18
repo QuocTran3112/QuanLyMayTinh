@@ -21,9 +21,9 @@ public class KetNoi {
 	}
 
 	public static Connection cn;
-	private final String serverName = "";
+	private final String serverName = "LAPTOP-FH256VT3";
 	private final String nameDatabase = "QlMayTinh";
-	private final String useId = "";
-	private final String passWord = "";
+	private final String useId = "quoctran3112";
+	private final String passWord = "321103";
 
 }

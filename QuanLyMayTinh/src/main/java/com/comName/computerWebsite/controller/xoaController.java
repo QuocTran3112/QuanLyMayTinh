@@ -45,10 +45,12 @@ public class xoaController extends HttpServlet {
 			e.printStackTrace();
 		}
     	String role = "";
-    	for (int i =0; i<roles.size();i++) {
-    		if (roles.get(i).getRoleID()==user.getRoleID()) {
-    			role = roles.get(i) .getRoleName();
-    		}
+    	if (user!=null ) {
+    		for (int i =0; i<roles.size();i++) {
+        		if (roles.get(i).getRoleID()==user.getRoleID()) {
+        			role = roles.get(i) .getRoleName();
+        		}
+        	}
     	}
     	
 		if (role.equals("admin")) {
@@ -86,6 +88,7 @@ public class xoaController extends HttpServlet {
 				// TODO: handle exception
 			}
 		} else {
+			request.setAttribute("invalid", "Bạn không có quyền xóa");
 			request.setAttribute("invalidRole", "Bạn không có quyền xóa");
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/client/giohang.jsp");
 			rd.forward(request, response);
